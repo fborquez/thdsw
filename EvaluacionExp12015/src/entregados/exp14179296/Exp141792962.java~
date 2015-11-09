@@ -1,0 +1,13 @@
+public class Exp141792962 {
+  public static void main(String[] args) throws Exception{
+    
+    //en este apartado coloco los tipos de unidad que tienen los productos
+     String[] tipodeUnidad=new String[4];
+     tipodeUnidad[1]="gramos";
+     tipodeUnidad[2]="pack";
+     tipodeUnidad[3]="unidad";
+     
+    
+    
+  }
+}
