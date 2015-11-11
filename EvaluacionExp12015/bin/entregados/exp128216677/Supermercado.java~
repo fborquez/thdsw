@@ -1,0 +1,9 @@
+import java.util.*;
+public class Supermercado{
+private String _nombre;
+ private ArrayList<Producto> catalogo = new ArrayList<Producto>(); 
+
+}
+1 error found:
+File: C:\Users\catedra\fpinto\128216677\Supemercado.java  [line: 2]
+Error: class Supermercado is public, should be declared in a file named Supermercado.java

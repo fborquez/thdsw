@@ -1,0 +1,7 @@
+public class Producto{
+private String _descripcion;
+private int _cantidad;
+private String _tipoUnidad 
+private int _precio;
+private double _descuento;
+}

@@ -1,0 +1,10 @@
+public class Producto {
+private String descripcion;
+private int cantidades;
+private int precio;
+private int descuento;
+public tipoUnidad[]=
+
+
+
+}

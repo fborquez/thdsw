@@ -1,0 +1,152 @@
+/* Programa: Exp08824873
+ * Objetivo:
+ * Autor   : Sergio A. Carrasco L.
+ * Ramo    : Herramientas Desarrollo software - 2015
+ * Fecha   : 20 de Octubre del 2015
+ * Profesor: Francisco H. Bórquez Burgos
+ */
+import java.util.Scanner;
+import java.util.ArrayList;
+//import java.util.Collections;
+
+public class Exp08824873 {
+  private static ArrayList<Util> aUtil = new ArrayList<Util>();
+  private static Scanner kbd = new Scanner(System.in);
+  //
+  public static void main (String[] args) {
+    int op = 0;
+    boolean lSalir = false;
+    do {
+      mostrarMenu();
+      op = kbd.nextInt();
+      //
+      switch (op) {
+        case 1:
+          ingresar();
+          break;
+        case 2:
+          ordenar();
+          break;
+        case 3:
+          mostrar();
+          break;
+        case 4:
+          lSalir = true;
+          limpiar(3);
+          System.out.println("¡ ADIOS !");
+          break;
+        default:
+          System.out.println("¡NUMERO debe estar entre 1 y 4!");
+      } //Fin Switch
+    } while (!lSalir);
+    
+    /*/Usaré ArrayList para ir almacenando cardinalidad de asociaciones.
+     
+     * System.out.print("Ingrese % de 6 Encuestas: ");    
+       for (int i = 0; i<6; i++) {
+         System.out.print(i + ") : ")
+         this.encuesta.add(new Encuesta());
+         this.encuesta.add(new Exp08824873().new Encuesta()); //para inner.
+       }
+     */
+
+    Util util = new Exp08824873().new Util();; //Debo instanciar antes de usar inner class.
+    util.mostrar();
+    kbd.close();
+  } //Fin main().
+
+  //Metodos internos
+  public static void mostrarMenu() {
+    System.out.printf("%20s"  ,"MENU DEL SISTEMA");
+    System.out.printf("\n%20s","----------------");
+    System.out.printf("\n%-30s","1) Ingresar Datos");
+    System.out.printf("\n%-30s","2) Ordenar Datos");    
+    System.out.printf("\n%-30s","3) Mostrar Datos");
+    System.out.printf("\n%-30s","4) Salir");
+    //
+    System.out.printf("\n\n%-30s","Ingrese número de opción: ");
+  }  
+  //
+  public static void ingresar() {
+    //Scanner kbd = new Scanner(System.in);
+    limpiar(5);
+    System.out.print("Ingrese Dato String: ");
+    kbd.next();
+    System.out.print("Ingrese Dato Entero: ");
+    kbd.nextInt();
+    System.out.print("Ingrese Dato Double: ");
+    kbd.nextDouble();
+    limpiar(5);    
+  } //Fin ingresar
+  //
+
+  public static void ordenar() {   //(double[] pje)
+    //Por mientras
+    double[] pje = new double[3];
+    int[] pos = new int[3];
+    for (int i=0; i<3; i++) {
+      pje[i] = 0;
+    }  
+    //Ordenar de mayor a menor
+    boolean lOrdenado = false;
+    double auxPje;
+    int auxPos;
+    while (!lOrdenado) {
+      lOrdenado = true;
+      for (int i=0; i<pje.length-1; i++) {
+        if (pje[i] < pje[i+1]) {
+          auxPje = pje[i];
+          auxPos = pos[i];
+          pje[i] = pje[i+1];
+          pos[i] = pos[i+1];                      
+          pje[i+1] = auxPje;
+          pos[i+1] = auxPos;
+          lOrdenado = false;
+        } //if
+      } //for
+    } //while
+  } //ordenar()
+  
+  public static void mostrar() {
+    //  
+  } //Fin mostrar
+  
+  public static void limpiar(int nVeces) {
+    for (int i = 0; i<nVeces; i++) System.out.println();
+  } //Fin limpiar
+
+  public static int max(ArrayList<Integer> aList) {
+    //ArrayList<Integer> aList = new ArrayList<Integer>();
+    int max = aList.get(0);
+    for(int i=0; i<aList.size(); i++) {
+      if(aList.get(i) > max) max = aList.get(i);
+    }
+    return max;
+  } //Fin max()
+  
+  public static int min(ArrayList<Integer> aList) {
+    //ArrayList<Integer> aList = new ArrayList<Integer>();
+    int min = aList.get(0);
+    for(int i=0; i<aList.size(); i++) {
+      if(aList.get(i) < min) min = aList.get(i);
+    }
+    return min;
+  } //Fin min()
+  
+
+  //*********  Inner  Class  *********
+
+  public class Util {
+    public void mostrar() {
+      System.out.printf("\n%10s\n","Hola interno");
+    } //Fin mostrar()
+    //
+    public Util() {
+    }  
+  
+  } //Fin Util
+
+  
+  //********* FIN Inner Class *********
+  
+} //Fin CLASS

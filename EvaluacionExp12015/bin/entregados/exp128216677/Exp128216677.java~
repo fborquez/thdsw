@@ -1,0 +1,14 @@
+class Exp128216677{
+  public static void main(String[] args) {
+  // generar catalogo en forma automatica
+   private ArrayList<Supermercado> supermencado = new ArrayList<Supermercado>();   
+   private ArrayList<Producto> catalogo = new ArrayList<Producto>(); 
+    
+    
+    
+  
+  
+  
+  
+  
+  }

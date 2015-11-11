@@ -1,0 +1,20 @@
+/**
+ * Auto Generated Java Class.
+ */
+
+import java.io.*;
+import java.util.*;
+
+public class Exp155562455 {
+  
+  public static void main(String[] args) throws Exception{
+    
+    int cantSuper = 2;
+    SuperMercado[] supers = new SuperMercado[cantSuper];
+  
+
+  }
+  
+  /* ADD YOUR CODE HERE */
+  
+}
